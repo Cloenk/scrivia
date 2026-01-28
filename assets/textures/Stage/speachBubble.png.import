@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drw325uxqtaab"
-path="res://.godot/imported/Steven.png-809f0ea692632c5ac3c52a541cce5e13.ctex"
+uid="uid://dfoci82of2dlk"
+path="res://.godot/imported/speachBubble.png-4e1caccf25070e2513931031a81e26fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/Concepts/Steven.png"
-dest_files=["res://.godot/imported/Steven.png-809f0ea692632c5ac3c52a541cce5e13.ctex"]
+source_file="res://assets/textures/Stage/speachBubble.png"
+dest_files=["res://.godot/imported/speachBubble.png-4e1caccf25070e2513931031a81e26fc.ctex"]
 
 [params]
 

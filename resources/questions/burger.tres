@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Question" format=3 uid="uid://5tsw21rlfsyh"]
+
+[ext_resource type="Script" uid="uid://c7i52175ijmhh" path="res://scripts/questions/general_question.gd" id="1_ir4sm"]
+
+[resource]
+script = ExtResource("1_ir4sm")
+question = "burger??????????????????"
+isFourAnswers = true
+pointsWorth = 1.0
+firstAnswer = "BURGER YUMMY :D"
+secondAnswer = "BURGER NO YUMMY :("
+thirdAnswer = "fog"
+fourthAnswer = "its better to cum in the sink then to sink in the cum"
+correctAnswer = 4
+metadata/_custom_type_script = "uid://c7i52175ijmhh"

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cx4cu0q2ppfw"
-path="res://.godot/imported/ConceptArt.png-80ff36d26d537b12181fe62961fd2725.ctex"
+uid="uid://cr2be7mnosltn"
+path="res://.godot/imported/FrontCurtain.png-d080d91e5ac634935d60f1738414259a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/Concepts/ConceptArt.png"
-dest_files=["res://.godot/imported/ConceptArt.png-80ff36d26d537b12181fe62961fd2725.ctex"]
+source_file="res://assets/textures/Stage/FrontCurtain.png"
+dest_files=["res://.godot/imported/FrontCurtain.png-d080d91e5ac634935d60f1738414259a.ctex"]
 
 [params]
 

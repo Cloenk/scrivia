@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ef32k8lkkqfa"
-path="res://.godot/imported/BackCurtain.png-bdf1a8e5136a926ce0387e55c9668c89.ctex"
+uid="uid://bxp28yipyaql2"
+path="res://.godot/imported/QuestionBoxMiddle.png-35f71f6f9845356921ef95a80483841c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/Concepts/BackCurtain.png"
-dest_files=["res://.godot/imported/BackCurtain.png-bdf1a8e5136a926ce0387e55c9668c89.ctex"]
+source_file="res://assets/textures/Question Boxes/QuestionBoxMiddle.png"
+dest_files=["res://.godot/imported/QuestionBoxMiddle.png-35f71f6f9845356921ef95a80483841c.ctex"]
 
 [params]
 

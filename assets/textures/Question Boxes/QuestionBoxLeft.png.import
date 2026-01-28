@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr2be7mnosltn"
-path="res://.godot/imported/FrontCurtain.png-b7f51876f578045476af97889d877974.ctex"
+uid="uid://oedqwgdi2q01"
+path="res://.godot/imported/QuestionBoxLeft.png-cc075dd9cbadb3a9c9e3ed858c28b550.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/Concepts/FrontCurtain.png"
-dest_files=["res://.godot/imported/FrontCurtain.png-b7f51876f578045476af97889d877974.ctex"]
+source_file="res://assets/textures/Question Boxes/QuestionBoxLeft.png"
+dest_files=["res://.godot/imported/QuestionBoxLeft.png-cc075dd9cbadb3a9c9e3ed858c28b550.ctex"]
 
 [params]
 

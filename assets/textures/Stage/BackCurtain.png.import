@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nw3s4ga24ydu"
-path="res://.godot/imported/Floor.png-722096d75537d8d1bfade2d74761937b.ctex"
+uid="uid://ef32k8lkkqfa"
+path="res://.godot/imported/BackCurtain.png-775508bccd0b8197af18eed8985e5049.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/Concepts/Floor.png"
-dest_files=["res://.godot/imported/Floor.png-722096d75537d8d1bfade2d74761937b.ctex"]
+source_file="res://assets/textures/Stage/BackCurtain.png"
+dest_files=["res://.godot/imported/BackCurtain.png-775508bccd0b8197af18eed8985e5049.ctex"]
 
 [params]
 

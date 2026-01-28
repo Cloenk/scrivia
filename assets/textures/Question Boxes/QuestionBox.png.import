@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfoci82of2dlk"
-path="res://.godot/imported/speachBubble.png-3a0b2ce21d9ca7234ee2f67718aab3f4.ctex"
+uid="uid://c34n227v3ccwv"
+path="res://.godot/imported/QuestionBox.png-07e9511a74913584f7343cb6b0d943c1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/Concepts/speachBubble.png"
-dest_files=["res://.godot/imported/speachBubble.png-3a0b2ce21d9ca7234ee2f67718aab3f4.ctex"]
+source_file="res://assets/textures/Question Boxes/QuestionBox.png"
+dest_files=["res://.godot/imported/QuestionBox.png-07e9511a74913584f7343cb6b0d943c1.ctex"]
 
 [params]
 

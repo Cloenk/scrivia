@@ -3,73 +3,109 @@
 [ext_resource type="Script" uid="uid://cgslc4cey4td5" path="res://scripts/game/question_display.gd" id="1_hu4h3"]
 [ext_resource type="Resource" uid="uid://b6vdp1d11ryqj" path="res://resources/questions/is_scrum_fun.tres" id="2_wyluf"]
 [ext_resource type="Resource" uid="uid://e7ytssign4cr" path="res://resources/questions/what_is_scrum.tres" id="3_0dm2g"]
+[ext_resource type="FontFile" uid="uid://bbv5lwyu2bjir" path="res://assets/Fonts/MedodicaRegular.otf" id="4_5mnri"]
+[ext_resource type="Resource" uid="uid://5tsw21rlfsyh" path="res://resources/questions/burger.tres" id="4_hfsmb"]
+[ext_resource type="Script" uid="uid://duqbeoyrldq87" path="res://scripts/game/labelButton.gd" id="5_krmh0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_krmh0"]
+font = ExtResource("4_5mnri")
+font_size = 68
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
 
 [node name="QuestionDisplay" type="Node2D" unique_id=2084494044]
 script = ExtResource("1_hu4h3")
-questions = [ExtResource("2_wyluf"), ExtResource("3_0dm2g")]
+questions = [ExtResource("2_wyluf"), ExtResource("3_0dm2g"), ExtResource("4_hfsmb")]
+
+[node name="BoxContainer" type="Node2D" parent="." unique_id=747140308]
 
 [node name="TheQuestion" type="Label" parent="." unique_id=1974515439]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 110.0
+offset_top = 90.0
+offset_right = 111.0
+offset_bottom = 210.0
 theme_override_font_sizes/font_size = 70
-text = "LALALA"
+text = "lljknawd"
+label_settings = SubResource("LabelSettings_krmh0")
+vertical_alignment = 1
 
 [node name="Four quest Button container" type="GridContainer" parent="." unique_id=1076086839]
-offset_left = -9.0
-offset_top = 120.0
-offset_right = 131.0
-offset_bottom = 229.0
-theme_override_constants/h_separation = 10
-theme_override_constants/v_separation = 10
+offset_left = 144.0
+offset_top = 639.0
+offset_right = 835.0
+offset_bottom = 1016.0
+theme_override_constants/h_separation = 250
+theme_override_constants/v_separation = 175
 columns = 2
 
-[node name="answer one" type="Button" parent="Four quest Button container" unique_id=1782626701]
+[node name="answer 1" type="Label" parent="Four quest Button container" unique_id=996265083]
 layout_mode = 2
-theme_override_font_sizes/font_size = 60
-text = "buh"
+text = "burger1"
+label_settings = SubResource("LabelSettings_krmh0")
+vertical_alignment = 1
+script = ExtResource("5_krmh0")
+metadata/_custom_type_script = "uid://duqbeoyrldq87"
 
-[node name="answer two" type="Button" parent="Four quest Button container" unique_id=431456218]
+[node name="answer 2" type="Label" parent="Four quest Button container" unique_id=1407329051]
 layout_mode = 2
-theme_override_font_sizes/font_size = 60
+text = "burger2"
+label_settings = SubResource("LabelSettings_krmh0")
+vertical_alignment = 1
+script = ExtResource("5_krmh0")
+metadata/_custom_type_script = "uid://duqbeoyrldq87"
 
-[node name="answer three" type="Button" parent="Four quest Button container" unique_id=602845730]
+[node name="answer 3" type="Label" parent="Four quest Button container" unique_id=1775981025]
 layout_mode = 2
-theme_override_font_sizes/font_size = 60
+text = "burger3"
+label_settings = SubResource("LabelSettings_krmh0")
+vertical_alignment = 1
+script = ExtResource("5_krmh0")
+metadata/_custom_type_script = "uid://duqbeoyrldq87"
 
-[node name="answer four" type="Button" parent="Four quest Button container" unique_id=1670382005]
+[node name="answer 4" type="Label" parent="Four quest Button container" unique_id=1440346973]
 layout_mode = 2
-theme_override_font_sizes/font_size = 60
+text = "burger4"
+label_settings = SubResource("LabelSettings_krmh0")
+vertical_alignment = 1
+script = ExtResource("5_krmh0")
+metadata/_custom_type_script = "uid://duqbeoyrldq87"
 
 [node name="Open quest button container" type="CenterContainer" parent="." unique_id=255822485]
-offset_left = 189.0
-offset_top = 135.0
-offset_right = 425.0
-offset_bottom = 226.0
+offset_left = 1520.0
+offset_top = 530.0
+offset_right = 1756.0
+offset_bottom = 621.0
 
 [node name="User input" type="LineEdit" parent="Open quest button container" unique_id=375039124]
 layout_mode = 2
 theme_override_font_sizes/font_size = 60
 
-[node name="True or False button container" type="HBoxContainer" parent="." unique_id=640100194]
-offset_left = 64.0
-offset_top = 369.0
-offset_right = 405.0
-offset_bottom = 460.0
-
-[node name="True" type="Button" parent="True or False button container" unique_id=1200045509]
-layout_mode = 2
-theme_override_font_sizes/font_size = 60
-text = "TRUE"
-
-[node name="False" type="Button" parent="True or False button container" unique_id=99480702]
-layout_mode = 2
-theme_override_font_sizes/font_size = 60
+[node name="FalseButton" type="Label" parent="." unique_id=163065864]
+offset_left = 164.0
+offset_top = 762.0
+offset_right = 309.0
+offset_bottom = 830.0
 text = "FALSE"
+label_settings = SubResource("LabelSettings_krmh0")
+vertical_alignment = 1
+script = ExtResource("5_krmh0")
+metadata/_custom_type_script = "uid://duqbeoyrldq87"
 
-[connection signal="pressed" from="Four quest Button container/answer one" to="." method="_on_answer_one_pressed"]
-[connection signal="pressed" from="Four quest Button container/answer two" to="." method="_on_answer_two_pressed"]
-[connection signal="pressed" from="Four quest Button container/answer three" to="." method="_on_answer_three_pressed"]
-[connection signal="pressed" from="Four quest Button container/answer four" to="." method="_on_answer_four_pressed"]
+[node name="TrueButton" type="Label" parent="." unique_id=1580599466]
+offset_left = 625.0
+offset_top = 762.0
+offset_right = 744.0
+offset_bottom = 830.0
+text = "TRUE"
+label_settings = SubResource("LabelSettings_krmh0")
+vertical_alignment = 1
+script = ExtResource("5_krmh0")
+metadata/_custom_type_script = "uid://duqbeoyrldq87"
+
+[connection signal="pressed" from="Four quest Button container/answer 1" to="." method="_on_answer_one_pressed"]
+[connection signal="pressed" from="Four quest Button container/answer 2" to="." method="_on_answer_two_pressed"]
+[connection signal="pressed" from="Four quest Button container/answer 3" to="." method="_on_answer_three_pressed"]
+[connection signal="pressed" from="Four quest Button container/answer 4" to="." method="_on_answer_four_pressed"]
 [connection signal="text_submitted" from="Open quest button container/User input" to="." method="_on_user_input_text_submitted"]
-[connection signal="pressed" from="True or False button container/True" to="." method="_on_true_pressed"]
-[connection signal="pressed" from="True or False button container/False" to="." method="_on_false_pressed"]
+[connection signal="pressed" from="FalseButton" to="." method="_on_false_pressed"]
+[connection signal="pressed" from="TrueButton" to="." method="_on_true_pressed"]

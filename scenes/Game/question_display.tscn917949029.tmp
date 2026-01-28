@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://bdajtvsxukxq1"]
+
+[ext_resource type="Script" uid="uid://cgslc4cey4td5" path="res://scripts/game/question_display.gd" id="1_hu4h3"]
+[ext_resource type="Resource" uid="uid://b6vdp1d11ryqj" path="res://resources/questions/is_scrum_fun.tres" id="2_wyluf"]
+[ext_resource type="Resource" uid="uid://e7ytssign4cr" path="res://resources/questions/what_is_scrum.tres" id="3_0dm2g"]
+
+[node name="QuestionDisplay" type="Node2D" unique_id=2084494044]
+script = ExtResource("1_hu4h3")
+questions = [ExtResource("2_wyluf"), ExtResource("3_0dm2g")]
+
+[node name="TheQuestion" type="Label" parent="." unique_id=1974515439]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 70
+text = "LALALA"
+
+[node name="Four quest Button container" type="GridContainer" parent="." unique_id=1076086839]
+offset_left = -9.0
+offset_top = 120.0
+offset_right = 131.0
+offset_bottom = 229.0
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 2
+
+[node name="answer one" type="Button" parent="Four quest Button container" unique_id=1782626701]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "buh"
+
+[node name="answer two" type="Button" parent="Four quest Button container" unique_id=431456218]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+
+[node name="answer three" type="Button" parent="Four quest Button container" unique_id=602845730]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+
+[node name="answer four" type="Button" parent="Four quest Button container" unique_id=1670382005]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+
+[node name="Open quest button container" type="CenterContainer" parent="." unique_id=255822485]
+offset_left = 189.0
+offset_top = 135.0
+offset_right = 425.0
+offset_bottom = 226.0
+
+[node name="User input" type="LineEdit" parent="Open quest button container" unique_id=375039124]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+
+[node name="True or False button container" type="HBoxContainer" parent="." unique_id=640100194]
+offset_left = 64.0
+offset_top = 369.0
+offset_right = 405.0
+offset_bottom = 460.0
+
+[node name="True" type="Button" parent="True or False button container" unique_id=1200045509]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "TRUE"
+
+[node name="False" type="Button" parent="True or False button container" unique_id=99480702]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "FALSE"
+
+[connection signal="pressed" from="Four quest Button container/answer one" to="." method="_on_answer_one_pressed"]
+[connection signal="pressed" from="Four quest Button container/answer two" to="." method="_on_answer_two_pressed"]
+[connection signal="pressed" from="Four quest Button container/answer three" to="." method="_on_answer_three_pressed"]
+[connection signal="pressed" from="Four quest Button container/answer four" to="." method="_on_answer_four_pressed"]
+[connection signal="text_submitted" from="Open quest button container/User input" to="." method="_on_user_input_text_submitted"]
+[connection signal="pressed" from="True or False button container/True" to="." method="_on_true_pressed"]
+[connection signal="pressed" from="True or False button container/False" to="." method="_on_false_pressed"]

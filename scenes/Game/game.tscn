@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://bonobgasupvon"]
+
+[ext_resource type="Texture2D" uid="uid://ef32k8lkkqfa" path="res://assets/textures/Concepts/BackCurtain.png" id="1_0i15y"]
+[ext_resource type="Texture2D" uid="uid://nw3s4ga24ydu" path="res://assets/textures/Concepts/Floor.png" id="2_7dfdq"]
+[ext_resource type="Texture2D" uid="uid://cr2be7mnosltn" path="res://assets/textures/Concepts/FrontCurtain.png" id="3_54y65"]
+[ext_resource type="Texture2D" uid="uid://drw325uxqtaab" path="res://assets/textures/Concepts/Steven.png" id="4_t5wam"]
+[ext_resource type="Texture2D" uid="uid://dfoci82of2dlk" path="res://assets/textures/Concepts/speachBubble.png" id="5_1p5ji"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="BackCurtain" type="Sprite2D" parent="Visuals"]
+position = Vector2(960, 540)
+scale = Vector2(10, 10)
+texture = ExtResource("1_0i15y")
+
+[node name="Floor" type="Sprite2D" parent="Visuals"]
+position = Vector2(960, 540)
+scale = Vector2(10, 10)
+texture = ExtResource("2_7dfdq")
+
+[node name="FrontCurtain" type="Sprite2D" parent="Visuals"]
+position = Vector2(960, 540)
+scale = Vector2(10, 10)
+texture = ExtResource("3_54y65")
+
+[node name="Mascot" type="Sprite2D" parent="Visuals"]
+position = Vector2(960, 540)
+scale = Vector2(10, 10)
+texture = ExtResource("4_t5wam")
+
+[node name="SpeachBubble" type="Sprite2D" parent="Visuals"]
+position = Vector2(960, 540)
+scale = Vector2(10, 10)
+texture = ExtResource("5_1p5ji")

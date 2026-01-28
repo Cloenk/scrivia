@@ -14,6 +14,12 @@ config/name="scrivia"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/stretch/mode="viewport"
+
 [file_customization]
 
 folder_colors={

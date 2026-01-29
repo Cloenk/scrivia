@@ -1,0 +1,310 @@
+[gd_scene format=3 uid="uid://b1m5cc4s33wah"]
+
+[ext_resource type="Script" uid="uid://dxbnokb3ncmkf" path="res://scripts/game/leader_board.gd" id="1_5l4ha"]
+[ext_resource type="FontFile" uid="uid://bbv5lwyu2bjir" path="res://assets/Fonts/MedodicaRegular.otf" id="1_nfghh"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nfghh"]
+font = ExtResource("1_nfghh")
+font_size = 175
+outline_size = 50
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="GDScript" id="GDScript_5l4ha"]
+resource_name = "refs"
+script/source = "extends Control
+@onready var nameLabel: Label = $name
+@onready var scoreLabel: Label = $Score
+
+var score = 0
+"
+
+[sub_resource type="LabelSettings" id="LabelSettings_5l4ha"]
+font = ExtResource("1_nfghh")
+font_size = 64
+outline_size = 26
+outline_color = Color(0, 0, 0, 1)
+
+[node name="LeaderBoard" type="Control" unique_id=776589843]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5l4ha")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2086860258]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.11764706, 0.11764706, 0.11764706, 0.74509805)
+
+[node name="LEADERBOARD" type="Label" parent="." unique_id=1006758105]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -110.5
+offset_right = 110.5
+offset_bottom = 120.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 70
+text = "Leaderboard"
+label_settings = SubResource("LabelSettings_nfghh")
+vertical_alignment = 1
+
+[node name="entries" type="Control" parent="." unique_id=51399283]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Player1" type="Control" parent="entries" unique_id=220544969]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -304.0
+offset_right = 256.0
+offset_bottom = -165.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_5l4ha")
+
+[node name="ColorRect" type="ColorRect" parent="entries/Player1" unique_id=189333871]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.11764706, 0.11764706, 0.11764706, 0.8901961)
+
+[node name="name" type="Label" parent="entries/Player1" unique_id=1398352211]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "name"
+label_settings = SubResource("LabelSettings_5l4ha")
+
+[node name="Score" type="Label" parent="entries/Player1" unique_id=74711832]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -59.5
+offset_top = 68.0
+offset_right = 60.5
+offset_bottom = 132.0
+grow_horizontal = 2
+text = "score"
+label_settings = SubResource("LabelSettings_5l4ha")
+
+[node name="Player2" type="Control" parent="entries" unique_id=854769569]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -154.0
+offset_right = 256.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_5l4ha")
+
+[node name="ColorRect" type="ColorRect" parent="entries/Player2" unique_id=204849976]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.11764706, 0.11764706, 0.11764706, 0.8901961)
+
+[node name="name" type="Label" parent="entries/Player2" unique_id=1517671030]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "name"
+label_settings = SubResource("LabelSettings_5l4ha")
+
+[node name="Score" type="Label" parent="entries/Player2" unique_id=1065970850]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -59.5
+offset_top = 68.0
+offset_right = 60.5
+offset_bottom = 132.0
+grow_horizontal = 2
+text = "score"
+label_settings = SubResource("LabelSettings_5l4ha")
+
+[node name="Player3" type="Control" parent="entries" unique_id=482935510]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -4.0
+offset_right = 256.0
+offset_bottom = 135.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_5l4ha")
+
+[node name="ColorRect" type="ColorRect" parent="entries/Player3" unique_id=987588483]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.11764706, 0.11764706, 0.11764706, 0.8901961)
+
+[node name="name" type="Label" parent="entries/Player3" unique_id=2139006059]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "name"
+label_settings = SubResource("LabelSettings_5l4ha")
+
+[node name="Score" type="Label" parent="entries/Player3" unique_id=224120431]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -59.5
+offset_top = 68.0
+offset_right = 60.5
+offset_bottom = 132.0
+grow_horizontal = 2
+text = "score"
+label_settings = SubResource("LabelSettings_5l4ha")
+
+[node name="Player4" type="Control" parent="entries" unique_id=1585602996]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = 146.0
+offset_right = 256.0
+offset_bottom = 285.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_5l4ha")
+
+[node name="ColorRect" type="ColorRect" parent="entries/Player4" unique_id=1949292954]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.11764706, 0.11764706, 0.11764706, 0.8901961)
+
+[node name="name" type="Label" parent="entries/Player4" unique_id=1269332461]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "name"
+label_settings = SubResource("LabelSettings_5l4ha")
+
+[node name="Score" type="Label" parent="entries/Player4" unique_id=1746542228]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -59.5
+offset_top = 68.0
+offset_right = 60.5
+offset_bottom = 132.0
+grow_horizontal = 2
+text = "score"
+label_settings = SubResource("LabelSettings_5l4ha")
+
+[node name="Player5" type="Control" parent="entries" unique_id=1040760321]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = 296.0
+offset_right = 256.0
+offset_bottom = 435.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_5l4ha")
+
+[node name="ColorRect" type="ColorRect" parent="entries/Player5" unique_id=160119794]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.11764706, 0.11764706, 0.11764706, 0.8901961)
+
+[node name="name" type="Label" parent="entries/Player5" unique_id=2011013083]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "name"
+label_settings = SubResource("LabelSettings_5l4ha")
+
+[node name="Score" type="Label" parent="entries/Player5" unique_id=1181252014]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -59.5
+offset_top = 68.0
+offset_right = 60.5
+offset_bottom = 132.0
+grow_horizontal = 2
+text = "score"
+label_settings = SubResource("LabelSettings_5l4ha")

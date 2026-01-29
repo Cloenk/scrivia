@@ -1,6 +1,9 @@
 extends Node2D
 class_name globertGame
 
+@onready var leader_board: Control = $CanvasLayer/LeaderBoard
+@onready var question_display: Node2D = $QuestionDisplay
+
 var Name: String
 var lastName: String
 var email: String
@@ -44,6 +47,8 @@ func actually_save():
 	# TODO to leadeerboatdr
 
 func end():
+	question_display.hide()
+	leader_board.loadLeaderBoard()
 	show_register_form()
 	# TODO I already added the end trigger, now only an animation and the scoreboard and those thingymajigs
 

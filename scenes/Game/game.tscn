@@ -9,10 +9,15 @@
 [ext_resource type="Texture2D" uid="uid://dfoci82of2dlk" path="res://assets/textures/Stage/speachBubble.png" id="5_1p5ji"]
 [ext_resource type="PackedScene" path="res://scenes/Game/leader_board.tscn" id="8_1p5ji"]
 [ext_resource type="Script" uid="uid://c7i52175ijmhh" path="res://scripts/questions/general_question.gd" id="8_yvoo5"]
+[ext_resource type="Resource" uid="uid://b846nqha0sb21" path="res://resources/questions/avo_dagen.tres" id="9_r8o54"]
 [ext_resource type="Resource" uid="uid://kt417a2g7y80" path="res://resources/questions/wat_is_scrum.tres" id="9_rwo3j"]
 [ext_resource type="Resource" uid="uid://clbbpyec6etce" path="res://resources/questions/hoe_lang_duurt_de_opleiding.tres" id="10_ph5vl"]
+[ext_resource type="Resource" uid="uid://jy2kbtt68ltj" path="res://resources/questions/cpp_main_lang.tres" id="10_rsxsa"]
 [ext_resource type="Resource" uid="uid://b0jpstx0yeefl" path="res://resources/questions/hou_je_van_eenden.tres" id="11_5rpqn"]
 [ext_resource type="Resource" uid="uid://bgcvpyjojf4rb" path="res://resources/questions/Waar_staat_oop_voor.tres" id="12_yvoo5"]
+[ext_resource type="Resource" uid="uid://dmp1n652217p5" path="res://resources/questions/Welke_prog_lang.tres" id="15_vfmmh"]
+[ext_resource type="Resource" uid="uid://dll6ujcccigbq" path="res://resources/questions/Welk_niveau.tres" id="16_vom40"]
+[ext_resource type="Resource" uid="uid://c21oowkvrvbsd" path="res://resources/questions/what_is_a_frameworl.tres" id="17_ultrl"]
 
 [node name="Game" type="Node2D" unique_id=472047127]
 script = ExtResource("1_54y65")
@@ -46,7 +51,7 @@ scale = Vector2(10, 10)
 texture = ExtResource("5_1p5ji")
 
 [node name="QuestionDisplay" parent="." unique_id=2084494044 instance=ExtResource("2_t5wam")]
-questions = Array[ExtResource("8_yvoo5")]([ExtResource("9_rwo3j"), ExtResource("10_ph5vl"), ExtResource("11_5rpqn"), ExtResource("12_yvoo5")])
+questions = Array[ExtResource("8_yvoo5")]([ExtResource("9_r8o54"), ExtResource("10_rsxsa"), ExtResource("10_ph5vl"), ExtResource("11_5rpqn"), ExtResource("12_yvoo5"), ExtResource("9_rwo3j"), ExtResource("15_vfmmh"), ExtResource("16_vom40"), ExtResource("17_ultrl")])
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1146422618]
 

@@ -167,7 +167,7 @@ func check_correct_four_answer(clickedAnswer: int):
 		else: 
 			GlobalGame.game.incorrect_answer()
 			print("incorrect four ans")
-	change_question()
+	diff_question_validator()
 
 func check_correct_open_answer(userInp: String):
 	if currentQuestionResource.isOpenAnswer:
@@ -193,7 +193,9 @@ func diff_question_validator():
 	if GlobalGame.game.questionsHad < GlobalGame.game.maxQuestions-1:
 		GlobalGame.game.questionsHad += 1
 		change_question()
-	else: GlobalGame.game.end()
+	else: 
+		print("end")
+		GlobalGame.game.end()
 
 func _on_answer_one_pressed() -> void:
 	check_correct_four_answer(1)

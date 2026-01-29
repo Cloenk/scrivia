@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cscve57sysnp3"
+path="res://.godot/imported/Family Feud Theme Song (Harvey era).mp3-2ada241e32cbfe93ccaf712f38da4bf5.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/Family Feud Theme Song (Harvey era).mp3"
+dest_files=["res://.godot/imported/Family Feud Theme Song (Harvey era).mp3-2ada241e32cbfe93ccaf712f38da4bf5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

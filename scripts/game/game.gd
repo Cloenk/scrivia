@@ -12,9 +12,10 @@ var leerjaar: String
 
 @onready var form: Node2D = $Form
 
-@onready var question_display: Node2D = $QuestionDisplay
 @onready var wil_je_: Label = $"Form/wil je?"
 @onready var wil_je_een_meeloopdag_: HBoxContainer = $"Form/Wil je een meeloopdag?"
+@onready var flash_animations: AnimationPlayer = $CanvasLayer/FlashAnimations
+@onready var music: AudioStreamPlayer = $Music
 
 # keeps track of how many points the player has as a floating woating bubble
 var currentPoints := 0.0
@@ -29,11 +30,16 @@ func _ready() -> void:
 	GlobalGame.game = self
 	unshow_register_form()
 
+func _process(delta: float) -> void:
+	if !music.is_playing():
+		music.play()
+
 func add_points(amount):
 	currentPoints += amount
+	flash_animations.play("goed")
 
 func incorrect_answer():
-	pass # TODO devin what shalleth we do here (sum like animation type shite)
+	flash_animations.play("slecht")
 
 func actually_save():
 	print("n: ", Name, " ln: ", lastName, " pts: ", currentPoints, " em: ", email, " hs: ", huidigSchool, " lj: ", leerjaar)
@@ -48,9 +54,7 @@ func actually_save():
 
 func end():
 	question_display.hide()
-	leader_board.loadLeaderBoard()
 	show_register_form()
-	# TODO I already added the end trigger, now only an animation and the scoreboard and those thingymajigs
 
 func show_register_form():
 	question_display.visible = false
@@ -61,6 +65,8 @@ func unshow_register_form():
 
 func _on_submit_pressed() -> void:
 	actually_save()
+	form.hide()
+	leader_board.loadLeaderBoard()
 
 func _on_name_text_changed(new_text: String) -> void:
 	Name = new_text
@@ -76,10 +82,3 @@ func _on_huidig_school_text_changed(new_text: String) -> void:
 
 func _on_leerjaar_text_changed(new_text: String) -> void:
 	leerjaar = new_text
-
-func _on_nee_pressed() -> void:
-	pass
-	# TODO Show learderbrood
-
-func _on_ja_pressed() -> void:
-	show_register_form()

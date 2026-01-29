@@ -97,7 +97,6 @@ offset_left = -20.0
 offset_right = 20.0
 offset_bottom = 23.0
 grow_horizontal = 2
-text = "name"
 label_settings = SubResource("LabelSettings_5l4ha")
 
 [node name="Score" type="Label" parent="entries/Player1" unique_id=74711832]
@@ -110,7 +109,6 @@ offset_top = 68.0
 offset_right = 60.5
 offset_bottom = 132.0
 grow_horizontal = 2
-text = "score"
 label_settings = SubResource("LabelSettings_5l4ha")
 
 [node name="Player2" type="Control" parent="entries" unique_id=854769569]
@@ -146,7 +144,6 @@ offset_left = -20.0
 offset_right = 20.0
 offset_bottom = 23.0
 grow_horizontal = 2
-text = "name"
 label_settings = SubResource("LabelSettings_5l4ha")
 
 [node name="Score" type="Label" parent="entries/Player2" unique_id=1065970850]
@@ -159,7 +156,6 @@ offset_top = 68.0
 offset_right = 60.5
 offset_bottom = 132.0
 grow_horizontal = 2
-text = "score"
 label_settings = SubResource("LabelSettings_5l4ha")
 
 [node name="Player3" type="Control" parent="entries" unique_id=482935510]
@@ -195,7 +191,6 @@ offset_left = -20.0
 offset_right = 20.0
 offset_bottom = 23.0
 grow_horizontal = 2
-text = "name"
 label_settings = SubResource("LabelSettings_5l4ha")
 
 [node name="Score" type="Label" parent="entries/Player3" unique_id=224120431]
@@ -208,7 +203,6 @@ offset_top = 68.0
 offset_right = 60.5
 offset_bottom = 132.0
 grow_horizontal = 2
-text = "score"
 label_settings = SubResource("LabelSettings_5l4ha")
 
 [node name="Player4" type="Control" parent="entries" unique_id=1585602996]
@@ -244,7 +238,6 @@ offset_left = -20.0
 offset_right = 20.0
 offset_bottom = 23.0
 grow_horizontal = 2
-text = "name"
 label_settings = SubResource("LabelSettings_5l4ha")
 
 [node name="Score" type="Label" parent="entries/Player4" unique_id=1746542228]
@@ -257,7 +250,6 @@ offset_top = 68.0
 offset_right = 60.5
 offset_bottom = 132.0
 grow_horizontal = 2
-text = "score"
 label_settings = SubResource("LabelSettings_5l4ha")
 
 [node name="Player5" type="Control" parent="entries" unique_id=1040760321]
@@ -293,7 +285,6 @@ offset_left = -20.0
 offset_right = 20.0
 offset_bottom = 23.0
 grow_horizontal = 2
-text = "name"
 label_settings = SubResource("LabelSettings_5l4ha")
 
 [node name="Score" type="Label" parent="entries/Player5" unique_id=1181252014]
@@ -306,5 +297,4 @@ offset_top = 68.0
 offset_right = 60.5
 offset_bottom = 132.0
 grow_horizontal = 2
-text = "score"
 label_settings = SubResource("LabelSettings_5l4ha")

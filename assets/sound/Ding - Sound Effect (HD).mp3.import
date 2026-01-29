@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://xv5p3hhcv7is"
+path="res://.godot/imported/Ding - Sound Effect (HD).mp3-73c7a1ea4432b422bb7e5c013a664b61.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/Ding - Sound Effect (HD).mp3"
+dest_files=["res://.godot/imported/Ding - Sound Effect (HD).mp3-73c7a1ea4432b422bb7e5c013a664b61.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

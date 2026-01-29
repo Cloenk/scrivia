@@ -5,6 +5,12 @@
 [resource]
 script = ExtResource("1_kva20")
 question = "Hoe lang duurt de opleiding"
-isOpenAnswer = true
-correctOpenAnswer = "4"
+isFourAnswers = true
+pointsWorth = 5.0
+firstAnswer = "4 jaar"
+secondAnswer = "2  jaar"
+thirdAnswer = "3 jaar"
+fourthAnswer = "5 jaar"
+correctAnswer = 1
+correctOpenAnswer = "0"
 metadata/_custom_type_script = "uid://c7i52175ijmhh"

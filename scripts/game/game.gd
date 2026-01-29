@@ -12,8 +12,6 @@ var leerjaar: String
 
 @onready var form: Node2D = $Form
 
-@onready var question_display: Node2D = $QuestionDisplay
-@onready var wil_je_: Label = $"Form/wil je?"
 @onready var wil_je_een_meeloopdag_: HBoxContainer = $"Form/Wil je een meeloopdag?"
 
 # keeps track of how many points the player has as a floating woating bubble

@@ -6,6 +6,7 @@
 script = ExtResource("1_ad6uy")
 question = "Waar staat OOP voor?"
 isFourAnswers = true
+pointsWorth = 25.0
 firstAnswer = "Pepernoot"
 secondAnswer = "Onder Ons Pand"
 thirdAnswer = "Object Orientated Programming"

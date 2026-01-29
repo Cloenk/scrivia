@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cr2be7mnosltn" path="res://assets/textures/Stage/FrontCurtain.png" id="3_54y65"]
 [ext_resource type="Texture2D" uid="uid://drw325uxqtaab" path="res://assets/textures/Stage/Steven.png" id="4_t5wam"]
 [ext_resource type="Texture2D" uid="uid://dfoci82of2dlk" path="res://assets/textures/Stage/speachBubble.png" id="5_1p5ji"]
-[ext_resource type="PackedScene" uid="uid://b1m5cc4s33wah" path="res://scenes/Game/leader_board.tscn" id="8_1p5ji"]
+[ext_resource type="PackedScene" path="res://scenes/Game/leader_board.tscn" id="8_1p5ji"]
 [ext_resource type="Script" uid="uid://c7i52175ijmhh" path="res://scripts/questions/general_question.gd" id="8_yvoo5"]
 [ext_resource type="Resource" uid="uid://kt417a2g7y80" path="res://resources/questions/wat_is_scrum.tres" id="9_rwo3j"]
 [ext_resource type="Resource" uid="uid://clbbpyec6etce" path="res://resources/questions/hoe_lang_duurt_de_opleiding.tres" id="10_ph5vl"]
@@ -16,7 +16,7 @@
 
 [node name="Game" type="Node2D" unique_id=472047127]
 script = ExtResource("1_54y65")
-maxQuestions = 5
+maxQuestions = 10
 
 [node name="Visuals" type="Node2D" parent="." unique_id=1858874079]
 
@@ -52,6 +52,7 @@ questions = Array[ExtResource("8_yvoo5")]([ExtResource("9_rwo3j"), ExtResource("
 
 [node name="LeaderBoard" parent="CanvasLayer" unique_id=776589843 instance=ExtResource("8_1p5ji")]
 visible = false
+
 [node name="Form" type="Node2D" parent="." unique_id=625509564]
 
 [node name="VBoxContainer" type="GridContainer" parent="Form" unique_id=1907463057]

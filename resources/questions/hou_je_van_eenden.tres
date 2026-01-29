@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_lqtrd")
-question = "Hou je van eenden?"
+question = "Rubberen eend??"
 isTrueOrFalse = true
 metadata/_custom_type_script = "uid://c7i52175ijmhh"

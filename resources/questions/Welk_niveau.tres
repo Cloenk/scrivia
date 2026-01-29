@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Question" format=3 uid="uid://dll6ujcccigbq"]
+
+[ext_resource type="Script" uid="uid://c7i52175ijmhh" path="res://scripts/questions/general_question.gd" id="1_x8w7i"]
+
+[resource]
+script = ExtResource("1_x8w7i")
+question = "Welk niveau is de opleiding?"
+isFourAnswers = true
+firstAnswer = "1"
+secondAnswer = "2"
+thirdAnswer = "3"
+fourthAnswer = "4"
+correctAnswer = 4
+correctOpenAnswer = "0"
+metadata/_custom_type_script = "uid://c7i52175ijmhh"

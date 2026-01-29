@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Question" format=3 uid="uid://bgcvpyjojf4rb"]
+
+[ext_resource type="Script" uid="uid://c7i52175ijmhh" path="res://scripts/questions/general_question.gd" id="1_ad6uy"]
+
+[resource]
+script = ExtResource("1_ad6uy")
+question = "Waar staat OOP voor?"
+isFourAnswers = true
+pointsWorth = 25.0
+firstAnswer = "Pepernoot"
+secondAnswer = "Onder Ons Pand"
+thirdAnswer = "Object Orientated Programming"
+fourthAnswer = "Other Of Programming"
+correctAnswer = 3
+metadata/_custom_type_script = "uid://c7i52175ijmhh"

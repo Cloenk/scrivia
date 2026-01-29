@@ -37,6 +37,7 @@ func _ready() -> void:
 func change_question():
 	clearQuestionBoxes()
 	currentQuestionResource = questions.pick_random()
+	questions.erase(currentQuestionResource)
 	the_question.text = str(currentQuestionResource.question)
 	
 	# if esa four answerito possibleh

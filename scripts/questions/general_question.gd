@@ -6,7 +6,7 @@ class_name Question
 @export var isFourAnswers: bool
 @export var isOpenAnswer: bool
 @export var isTrueOrFalse: bool
-@export var pointsWorth: float
+@export var pointsWorth := 10.0
 
 @export_category("fourAnswerSettings")
 @export var firstAnswer: String

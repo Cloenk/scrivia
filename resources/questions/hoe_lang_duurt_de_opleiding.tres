@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Question" format=3 uid="uid://clbbpyec6etce"]
+
+[ext_resource type="Script" uid="uid://c7i52175ijmhh" path="res://scripts/questions/general_question.gd" id="1_kva20"]
+
+[resource]
+script = ExtResource("1_kva20")
+question = "Hoe lang duurt de opleiding"
+isOpenAnswer = true
+correctOpenAnswer = "4"
+metadata/_custom_type_script = "uid://c7i52175ijmhh"

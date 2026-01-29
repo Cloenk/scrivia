@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" format=3 uid="uid://kt417a2g7y80"]
+
+[ext_resource type="Script" uid="uid://c7i52175ijmhh" path="res://scripts/questions/general_question.gd" id="1_2pu4q"]
+
+[resource]
+script = ExtResource("1_2pu4q")
+question = "Wat is SCRUM?"
+isFourAnswers = true
+firstAnswer = "Een burger stand"
+secondAnswer = "Een agile workmethode"
+thirdAnswer = "Een programma om in te coderen"
+fourthAnswer = "Ligma"
+correctAnswer = 2
+metadata/_custom_type_script = "uid://c7i52175ijmhh"

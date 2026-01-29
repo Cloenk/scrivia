@@ -34,70 +34,126 @@ var currentQuestionResource: Question
 func _ready() -> void:
 	change_question()
 
-# this is for picking a random new question (FOR READABILITY, I WILL COMMENT EVERYTHING CUZ I WANNAA
 func change_question():
 	clearQuestionBoxes()
 	currentQuestionResource = questions.pick_random()
 	the_question.text = str(currentQuestionResource.question)
+	
 	# if esa four answerito possibleh
 	if currentQuestionResource.isFourAnswers:
-		# Devin, you can do the animations. for now I jujitsu set them to invisible or visible
 		open_quest_button_container.visible = false
 		false_button.visible = false
 		true_button.visible = false
 		four_quest_button_container.visible = true
+		
 		# set the text of the buttons to the answ
 		answer_1.text = str(currentQuestionResource.firstAnswer)
 		answer_2.text = str(currentQuestionResource.secondAnswer)
 		answer_3.text = str(currentQuestionResource.thirdAnswer)
 		answer_4.text = str(currentQuestionResource.fourthAnswer)
-		createQuestionBox(answer_1)
-		createQuestionBox(answer_2)
-		createQuestionBox(answer_3)
-		createQuestionBox(answer_4)
-		# set the background
+		
+		# Create boxes grouped by side
+		await createQuestionBoxesBySide([answer_1, answer_2, answer_3, answer_4])
+		
 	# if it's an open question 
 	elif currentQuestionResource.isOpenAnswer:
-		# same as aboeve
 		false_button.visible = false
 		true_button.visible = false
 		four_quest_button_container.visible = false
 		open_quest_button_container.visible = true
+		
 	# if it's a true or false question
 	elif currentQuestionResource.isTrueOrFalse:
-		# burger
 		four_quest_button_container.visible = false
 		open_quest_button_container.visible = false
 		false_button.visible = true
 		true_button.visible = true
-		createQuestionBox(false_button)
-		createQuestionBox(true_button)
-	#create question box for the question
+		
+		# Create boxes grouped by side
+		await createQuestionBoxesBySide([false_button, true_button])
+	
+	# create question box for the question
 	createQuestionBox(the_question)
 
-func createQuestionBox(label: Node): #burger creation I KNOW THIS IS JANKY AS FUCK BUT DEAL WITH IT
-	await get_tree().process_frame #<--- if i don't do this the size.x is 1.0 the first time (godot is kinda stupid)
-	var size = label.size.x / 100
-	var pos = label.global_position + Vector2(-30,60) #welcome to magic number heaven
+# New function to create boxes grouped by screen side
+func createQuestionBoxesBySide(labels: Array):
+	# Wait for labels to update their sizes and positions
+	await get_tree().process_frame
+	await get_tree().process_frame
+	
+	# Force size recalculation
+	for label in labels:
+		if label is Control:
+			label.reset_size()
+	
+	# Wait one more frame to ensure positions are updated
+	await get_tree().process_frame
+	
+	# Get screen center
+	var screen_center_x = get_viewport_rect().size.x / 2.0
+	
+	# Group labels by side and find max width per side
+	var left_labels = []
+	var right_labels = []
+	var max_width_left = 0.0
+	var max_width_right = 0.0
+	
+	for label in labels:
+		if label.global_position.x < screen_center_x:
+			left_labels.append(label)
+			max_width_left = max(max_width_left, label.size.x)
+		else:
+			right_labels.append(label)
+			max_width_right = max(max_width_right, label.size.x)
+	
+	# Create boxes for left side labels
+	for label in left_labels:
+		createQuestionBoxWithSize(label, max_width_left)
+	
+	# Create boxes for right side labels
+	for label in right_labels:
+		createQuestionBoxWithSize(label, max_width_right)
+
+# Modified function that accepts a specific width
+func createQuestionBoxWithSize(label: Node, width: float):
+	var size = width / 100
+	var pos = label.global_position + Vector2(-30, 60)
+	
+	# Create left cap
 	var newSprite = Sprite2D.new()
 	newSprite.texture = QUESTION_BOX_LEFT
-	newSprite.scale = Vector2(10,10)
+	newSprite.scale = Vector2(10, 10)
 	newSprite.global_position = pos
 	box_container.add_child(newSprite)
-	pos.x += 25  #welcome to magic number heaven part 2
+	
+	pos.x += 25
+	
+	# Create middle sections
 	while size >= 0:
 		size -= 0.5
 		var newerSprite = Sprite2D.new()
 		newerSprite.texture = QUESTION_BOX_MIDDLE
-		newerSprite.scale = Vector2(10,10)
+		newerSprite.scale = Vector2(10, 10)
 		box_container.add_child(newerSprite)
 		pos.x += 50
 		newerSprite.global_position = pos
+	
+	# Create right cap
 	var newestSprite = Sprite2D.new()
 	newestSprite.texture = QUESTION_BOX_RIGHT
-	newestSprite.scale = Vector2(10,10)
-	newestSprite.global_position = pos + Vector2(50,0)
+	newestSprite.scale = Vector2(10, 10)
+	newestSprite.global_position = pos + Vector2(50, 0)
 	box_container.add_child(newestSprite)
+
+# Keep the original function for the question label
+func createQuestionBox(label: Node):
+	await get_tree().process_frame
+	await get_tree().process_frame
+	
+	if label is Control:
+		label.reset_size()
+	
+	createQuestionBoxWithSize(label, label.size.x)
 
 func clearQuestionBoxes(): #burger deletion
 	for Box: Sprite2D in box_container.get_children():
@@ -154,6 +210,7 @@ func _on_answer_four_pressed() -> void:
 # this parses the user inp to the question checker
 func _on_user_input_text_submitted(new_text: String) -> void:
 	check_correct_open_answer(new_text)
+	user_input.clear()
 
 #for these 2 down here, 0 is true and 1 is false-tim JUST USE A BOOLEAN BRUH???-devin
 func _on_true_pressed() -> void:

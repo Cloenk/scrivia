@@ -1,11 +1,39 @@
 [gd_scene format=3 uid="uid://bdajtvsxukxq1"]
 
 [ext_resource type="Script" uid="uid://cgslc4cey4td5" path="res://scripts/game/question_display.gd" id="1_hu4h3"]
-[ext_resource type="Resource" uid="uid://b6vdp1d11ryqj" path="res://resources/questions/is_scrum_fun.tres" id="2_wyluf"]
-[ext_resource type="Resource" uid="uid://e7ytssign4cr" path="res://resources/questions/what_is_scrum.tres" id="3_0dm2g"]
+[ext_resource type="Script" uid="uid://c7i52175ijmhh" path="res://scripts/questions/general_question.gd" id="2_5mnri"]
 [ext_resource type="FontFile" uid="uid://bbv5lwyu2bjir" path="res://assets/Fonts/MedodicaRegular.otf" id="4_5mnri"]
-[ext_resource type="Resource" uid="uid://5tsw21rlfsyh" path="res://resources/questions/burger.tres" id="4_hfsmb"]
 [ext_resource type="Script" uid="uid://duqbeoyrldq87" path="res://scripts/game/labelButton.gd" id="5_krmh0"]
+
+[sub_resource type="Resource" id="Resource_krmh0"]
+script = ExtResource("2_5mnri")
+question = "Is scrum fun?"
+isTrueOrFalse = true
+correctTOFAnswer = 1
+metadata/_custom_type_script = "uid://c7i52175ijmhh"
+
+[sub_resource type="Resource" id="Resource_hfsmb"]
+script = ExtResource("2_5mnri")
+question = "What is SCRUM?"
+isFourAnswers = true
+firstAnswer = "yes"
+secondAnswer = "no"
+thirdAnswer = "bram"
+fourthAnswer = "agile"
+correctAnswer = 4
+metadata/_custom_type_script = "uid://c7i52175ijmhh"
+
+[sub_resource type="Resource" id="Resource_o5no5"]
+script = ExtResource("2_5mnri")
+question = "burger??????????????????"
+isFourAnswers = true
+pointsWorth = 1.0
+firstAnswer = "BURGER YUMMY :D"
+secondAnswer = "BURGER NO YUMMY :("
+thirdAnswer = "fog"
+fourthAnswer = "its better to cum in the sink then to sink in the cum"
+correctAnswer = 4
+metadata/_custom_type_script = "uid://c7i52175ijmhh"
 
 [sub_resource type="LabelSettings" id="LabelSettings_krmh0"]
 font = ExtResource("4_5mnri")
@@ -15,7 +43,7 @@ outline_color = Color(0, 0, 0, 1)
 
 [node name="QuestionDisplay" type="Node2D" unique_id=2084494044]
 script = ExtResource("1_hu4h3")
-questions = [ExtResource("2_wyluf"), ExtResource("3_0dm2g"), ExtResource("4_hfsmb")]
+questions = Array[ExtResource("2_5mnri")]([SubResource("Resource_krmh0"), SubResource("Resource_hfsmb"), SubResource("Resource_o5no5")])
 
 [node name="BoxContainer" type="Node2D" parent="." unique_id=747140308]
 

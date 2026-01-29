@@ -14,7 +14,7 @@
 
 [node name="Game" type="Node2D" unique_id=472047127]
 script = ExtResource("1_54y65")
-maxQuestions = 200
+maxQuestions = 2
 
 [node name="Visuals" type="Node2D" parent="." unique_id=1858874079]
 
@@ -45,3 +45,114 @@ texture = ExtResource("5_1p5ji")
 
 [node name="QuestionDisplay" parent="." unique_id=2084494044 instance=ExtResource("2_t5wam")]
 questions = Array[ExtResource("8_yvoo5")]([ExtResource("9_rwo3j"), ExtResource("10_ph5vl"), ExtResource("11_5rpqn")])
+
+[node name="Form" type="Node2D" parent="." unique_id=625509564]
+
+[node name="VBoxContainer" type="GridContainer" parent="Form" unique_id=1907463057]
+offset_left = 512.0
+offset_top = 173.0
+offset_right = 1307.0
+offset_bottom = 708.0
+columns = 2
+
+[node name="nameLabel" type="Label" parent="Form/VBoxContainer" unique_id=1350134108]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 20
+theme_override_font_sizes/font_size = 60
+text = "Voornaam: "
+
+[node name="Name" type="LineEdit" parent="Form/VBoxContainer" unique_id=427152923]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+
+[node name="LastNameLabel2" type="Label" parent="Form/VBoxContainer" unique_id=824148555]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 20
+theme_override_font_sizes/font_size = 60
+text = "Achternaam: "
+
+[node name="lastName" type="LineEdit" parent="Form/VBoxContainer" unique_id=385970127]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+
+[node name="EmailLabel3" type="Label" parent="Form/VBoxContainer" unique_id=21421980]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 20
+theme_override_font_sizes/font_size = 60
+text = "Email addres: "
+
+[node name="email" type="LineEdit" parent="Form/VBoxContainer" unique_id=1788347464]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+
+[node name="EmailLabel4" type="Label" parent="Form/VBoxContainer" unique_id=77867265]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 20
+theme_override_font_sizes/font_size = 60
+text = "Je huidige school: "
+
+[node name="huidigSchool" type="LineEdit" parent="Form/VBoxContainer" unique_id=1747041400]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+
+[node name="LeerjaarLabel" type="Label" parent="Form/VBoxContainer" unique_id=1665177344]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 20
+theme_override_font_sizes/font_size = 60
+text = "Je huidige leerjaar: "
+
+[node name="leerjaar" type="LineEdit" parent="Form/VBoxContainer" unique_id=1596951030]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+
+[node name="Submit" type="Button" parent="Form" unique_id=816079186]
+offset_left = 665.0
+offset_top = 600.0
+offset_right = 1061.0
+offset_bottom = 704.0
+theme_override_font_sizes/font_size = 70
+text = "Doorsturen"
+
+[node name="wil je?" type="Label" parent="Form" unique_id=1374279568]
+offset_left = 500.0
+offset_top = 506.0
+offset_right = 1261.0
+offset_bottom = 692.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 20
+theme_override_font_sizes/font_size = 60
+text = "Wil je een meeloopdag?
+(Dit is puur voor info, 
+je wordt niet echt ingeschreven.)"
+
+[node name="Wil je een meeloopdag?" type="HBoxContainer" parent="Form" unique_id=1660796433]
+offset_left = 792.0
+offset_top = 721.0
+offset_right = 951.0
+offset_bottom = 861.0
+theme_override_constants/separation = 15
+
+[node name="Ja" type="Button" parent="Form/Wil je een meeloopdag?" unique_id=774819301]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Ja"
+
+[node name="Nee" type="Button" parent="Form/Wil je een meeloopdag?" unique_id=220645790]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Nee"
+
+[connection signal="text_changed" from="Form/VBoxContainer/Name" to="." method="_on_name_text_changed"]
+[connection signal="text_submitted" from="Form/VBoxContainer/Name" to="." method="_on_name_text_submitted"]
+[connection signal="text_changed" from="Form/VBoxContainer/lastName" to="." method="_on_last_name_text_changed"]
+[connection signal="text_changed" from="Form/VBoxContainer/email" to="." method="_on_email_text_changed"]
+[connection signal="text_changed" from="Form/VBoxContainer/huidigSchool" to="." method="_on_huidig_school_text_changed"]
+[connection signal="text_changed" from="Form/VBoxContainer/leerjaar" to="." method="_on_leerjaar_text_changed"]
+[connection signal="pressed" from="Form/Submit" to="." method="_on_submit_pressed"]
+[connection signal="pressed" from="Form/Wil je een meeloopdag?/Ja" to="." method="_on_ja_pressed"]
+[connection signal="pressed" from="Form/Wil je een meeloopdag?/Nee" to="." method="_on_nee_pressed"]

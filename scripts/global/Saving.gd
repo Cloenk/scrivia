@@ -2,9 +2,6 @@ extends Node
 
 var file_dir = "res://player_data.cfg"
 
-func _ready() -> void:
-	savePlayer("opa jan2","dark",10,"ikke@burger.nl","brgferschool","4")
-
 func savePlayer(Name: String, lastName: String, Score: float, email: String, huidigSchool: String, leerjaar: String):
 	var config = ConfigFile.new()
 	config.load(file_dir)

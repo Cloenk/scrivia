@@ -190,7 +190,7 @@ func check_correct_tof_answer(answ: int):
 		diff_question_validator()
 
 func diff_question_validator():
-	if GlobalGame.game.questionsHad <= GlobalGame.game.maxQuestions:
+	if GlobalGame.game.questionsHad < GlobalGame.game.maxQuestions-1:
 		GlobalGame.game.questionsHad += 1
 		change_question()
 	else: GlobalGame.game.end()

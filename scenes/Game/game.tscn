@@ -11,10 +11,11 @@
 [ext_resource type="Resource" uid="uid://kt417a2g7y80" path="res://resources/questions/wat_is_scrum.tres" id="9_rwo3j"]
 [ext_resource type="Resource" uid="uid://clbbpyec6etce" path="res://resources/questions/hoe_lang_duurt_de_opleiding.tres" id="10_ph5vl"]
 [ext_resource type="Resource" uid="uid://b0jpstx0yeefl" path="res://resources/questions/hou_je_van_eenden.tres" id="11_5rpqn"]
+[ext_resource type="Resource" uid="uid://bgcvpyjojf4rb" path="res://resources/questions/Waar_staat_oop_voor.tres" id="12_yvoo5"]
 
 [node name="Game" type="Node2D" unique_id=472047127]
 script = ExtResource("1_54y65")
-maxQuestions = 2
+maxQuestions = 5
 
 [node name="Visuals" type="Node2D" parent="." unique_id=1858874079]
 
@@ -44,7 +45,7 @@ scale = Vector2(10, 10)
 texture = ExtResource("5_1p5ji")
 
 [node name="QuestionDisplay" parent="." unique_id=2084494044 instance=ExtResource("2_t5wam")]
-questions = Array[ExtResource("8_yvoo5")]([ExtResource("9_rwo3j"), ExtResource("10_ph5vl"), ExtResource("11_5rpqn")])
+questions = Array[ExtResource("8_yvoo5")]([ExtResource("9_rwo3j"), ExtResource("10_ph5vl"), ExtResource("11_5rpqn"), ExtResource("12_yvoo5")])
 
 [node name="Form" type="Node2D" parent="." unique_id=625509564]
 

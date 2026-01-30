@@ -196,7 +196,7 @@ data = PackedByteArray("SUQzBAAAAAABAFRYWFgAAAASAAADbWFqb3JfYnJhbmQAbXA0MgBUWFhY
 
 [node name="Game" type="Node2D" unique_id=472047127]
 script = ExtResource("1_54y65")
-maxQuestions = 10
+maxQuestions = 5
 
 [node name="Visuals" type="Node2D" parent="." unique_id=1858874079]
 

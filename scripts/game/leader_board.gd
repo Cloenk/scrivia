@@ -1,10 +1,10 @@
 extends Control
 
-@onready var player_1: Control = $Player1
-@onready var player_2: Control = $Player2
-@onready var player_3: Control = $Player3
-@onready var player_4: Control = $Player4
-@onready var player_5: Control = $Player5
+@onready var player_1: Control = $entries/Player1
+@onready var player_2: Control = $entries/Player2
+@onready var player_3: Control = $entries/Player3
+@onready var player_4: Control = $entries/Player4
+@onready var player_5: Control = $entries/Player5
 @onready var entries: Control = $entries
 
 # Get the leaderboard twin

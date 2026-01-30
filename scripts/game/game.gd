@@ -23,6 +23,8 @@ var currentPoints := 0.0
 # keeps track of how many questions the player has answered
 var questionsHad := 0
 
+var fullscreen = false
+
 # keeps track of how many questions the player can answer
 @export var maxQuestions := 0
 
@@ -35,6 +37,14 @@ func _process(_delta: float) -> void:
 		music.play()
 	if Input.is_action_just_pressed("restart"):
 		get_tree().reload_current_scene()
+	
+	if Input.is_action_just_pressed("fullscreen"):
+		if fullscreen:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+			fullscreen = false
+		else:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+			fullscreen = true
 
 func add_points(amount):
 	currentPoints += amount

@@ -11,4 +11,5 @@ secondAnswer = "C++"
 thirdAnswer = "GDScript"
 fourthAnswer = "Lua"
 correctAnswer = 1
+correctOpenAnswer = "0"
 metadata/_custom_type_script = "uid://c7i52175ijmhh"

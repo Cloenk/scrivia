@@ -39,14 +39,3 @@ func loadLeaderBoard():
 			entry_nodes[i].score = 0
 			entry_nodes[i].nameLabel.text = "---"
 			entry_nodes[i].scoreLabel.text = "0"
-	
-	# Save the top 5 back to the config file
-	config.clear()
-	for i in range(scores_array.size()):
-		var section = "Player" + str(i + 1)
-		var name_parts = scores_array[i].name.split(" ", false, 1)
-		config.set_value(section, "PlayerName", name_parts[0] if name_parts.size() > 0 else "")
-		config.set_value(section, "lastName", name_parts[1] if name_parts.size() > 1 else "")
-		config.set_value(section, "score", scores_array[i].score)
-	
-	config.save(Saving.file_dir)

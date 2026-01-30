@@ -17,6 +17,7 @@ func loadLeaderBoard():
 		var Score = config.get_value(player,"score")
 		for entry in entries.get_children():
 			if entry.score < Score:
+				print(entry.score," ",Score," ",Name)
 				entry.score = Score
 				entry.nameLabel.text = Name
 				entry.scoreLabel.text = str(Score)

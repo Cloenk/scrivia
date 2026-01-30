@@ -9,8 +9,17 @@
 [ext_resource type="Texture2D" uid="uid://dfoci82of2dlk" path="res://assets/textures/Stage/speachBubble.png" id="5_1p5ji"]
 [ext_resource type="FontFile" uid="uid://bbv5lwyu2bjir" path="res://assets/Fonts/MedodicaRegular.otf" id="7_u6w8h"]
 [ext_resource type="PackedScene" uid="uid://b1m5cc4s33wah" path="res://scenes/Game/leader_board.tscn" id="8_1p5ji"]
+[ext_resource type="Script" uid="uid://c7i52175ijmhh" path="res://scripts/questions/general_question.gd" id="9_vfmmh"]
+[ext_resource type="Resource" uid="uid://jy2kbtt68ltj" path="res://resources/questions/cpp_main_lang.tres" id="10_vom40"]
+[ext_resource type="Resource" uid="uid://clbbpyec6etce" path="res://resources/questions/hoe_lang_duurt_de_opleiding.tres" id="11_ultrl"]
+[ext_resource type="Resource" uid="uid://bgcvpyjojf4rb" path="res://resources/questions/Waar_staat_oop_voor.tres" id="12_80bkf"]
 [ext_resource type="AudioStream" uid="uid://cscve57sysnp3" path="res://assets/sound/Family Feud Theme Song (Harvey era).mp3" id="12_wg16f"]
+[ext_resource type="Resource" uid="uid://kt417a2g7y80" path="res://resources/questions/wat_is_scrum.tres" id="13_i3l22"]
 [ext_resource type="AudioStream" uid="uid://gcmklwhhh5k" path="res://assets/sound/EXTREMELY LOUD INCORRECT BUZZER.mp3" id="13_y7cus"]
+[ext_resource type="Resource" uid="uid://dll6ujcccigbq" path="res://resources/questions/Welk_niveau.tres" id="14_my6rh"]
+[ext_resource type="Resource" uid="uid://b846nqha0sb21" path="res://resources/questions/avo_dagen.tres" id="15_dadte"]
+[ext_resource type="Resource" uid="uid://dmp1n652217p5" path="res://resources/questions/Welke_prog_lang.tres" id="16_h33em"]
+[ext_resource type="Resource" uid="uid://c21oowkvrvbsd" path="res://resources/questions/what_is_a_frameworl.tres" id="17_465xe"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ssgoc"]
 font = ExtResource("7_u6w8h")
@@ -196,7 +205,7 @@ data = PackedByteArray("SUQzBAAAAAABAFRYWFgAAAASAAADbWFqb3JfYnJhbmQAbXA0MgBUWFhY
 
 [node name="Game" type="Node2D" unique_id=472047127]
 script = ExtResource("1_54y65")
-maxQuestions = 10
+maxQuestions = 5
 
 [node name="Visuals" type="Node2D" parent="." unique_id=1858874079]
 
@@ -237,6 +246,7 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="QuestionDisplay" parent="." unique_id=2084494044 instance=ExtResource("2_t5wam")]
+questions = Array[ExtResource("9_vfmmh")]([ExtResource("10_vom40"), ExtResource("11_ultrl"), ExtResource("12_80bkf"), ExtResource("13_i3l22"), ExtResource("14_my6rh"), ExtResource("15_dadte"), ExtResource("16_h33em"), ExtResource("17_465xe")])
 
 [node name="Form" type="Node2D" parent="." unique_id=625509564]
 

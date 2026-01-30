@@ -33,6 +33,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if !music.is_playing():
 		music.play()
+	if Input.is_action_just_pressed("restart"):
+		get_tree().reload_current_scene()
 
 func add_points(amount):
 	currentPoints += amount

@@ -7,18 +7,46 @@ extends Control
 @onready var player_5: Control = $Player5
 @onready var entries: Control = $entries
 
-#get the leaderboard twin
+# Get the leaderboard twin
 func loadLeaderBoard():
 	show()
 	var config = ConfigFile.new()
 	config.load(Saving.file_dir)
+	
+	# Load all scores into an array
+	var scores_array = []
 	for player in config.get_sections():
-		var Name = str(config.get_value(player,"PlayerName")+" "+config.get_value(player,"lastName"))
-		var Score = config.get_value(player,"score")
-		for entry in entries.get_children():
-			if entry.score < Score:
-				print(entry.score," ",Score," ",Name)
-				entry.score = Score
-				entry.nameLabel.text = Name
-				entry.scoreLabel.text = str(Score)
-				break
+		var player_name = str(config.get_value(player, "PlayerName") + " " + config.get_value(player, "lastName"))
+		var player_score = config.get_value(player, "score")
+		scores_array.append({"name": player_name, "score": player_score})
+	
+	# Sort the array by score (descending)
+	scores_array.sort_custom(func(a, b): return a.score > b.score)
+	
+	# Keep only top 5
+	if scores_array.size() > 5:
+		scores_array.resize(5)
+	
+	# Update the UI entries
+	var entry_nodes = entries.get_children()
+	for i in range(entry_nodes.size()):
+		if i < scores_array.size():
+			entry_nodes[i].score = scores_array[i].score
+			entry_nodes[i].nameLabel.text = scores_array[i].name
+			entry_nodes[i].scoreLabel.text = str(scores_array[i].score)
+		else:
+			# Clear entries that don't have data
+			entry_nodes[i].score = 0
+			entry_nodes[i].nameLabel.text = "---"
+			entry_nodes[i].scoreLabel.text = "0"
+	
+	# Save the top 5 back to the config file
+	config.clear()
+	for i in range(scores_array.size()):
+		var section = "Player" + str(i + 1)
+		var name_parts = scores_array[i].name.split(" ", false, 1)
+		config.set_value(section, "PlayerName", name_parts[0] if name_parts.size() > 0 else "")
+		config.set_value(section, "lastName", name_parts[1] if name_parts.size() > 1 else "")
+		config.set_value(section, "score", scores_array[i].score)
+	
+	config.save(Saving.file_dir)

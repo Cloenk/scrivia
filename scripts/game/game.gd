@@ -30,7 +30,7 @@ func _ready() -> void:
 	GlobalGame.game = self
 	unshow_register_form()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if !music.is_playing():
 		music.play()
 	if Input.is_action_just_pressed("restart"):

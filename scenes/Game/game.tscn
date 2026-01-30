@@ -20,6 +20,9 @@
 [ext_resource type="Resource" uid="uid://b846nqha0sb21" path="res://resources/questions/avo_dagen.tres" id="15_dadte"]
 [ext_resource type="Resource" uid="uid://dmp1n652217p5" path="res://resources/questions/Welke_prog_lang.tres" id="16_h33em"]
 [ext_resource type="Resource" uid="uid://c21oowkvrvbsd" path="res://resources/questions/what_is_a_frameworl.tres" id="17_465xe"]
+[ext_resource type="Resource" uid="uid://cwwrsbiu1fxtp" path="res://resources/questions/wat_doet_een_dev.tres" id="18_vom40"]
+[ext_resource type="Resource" uid="uid://cao2kffuclga0" path="res://resources/questions/wat_is_een_bug.tres" id="19_80bkf"]
+[ext_resource type="Resource" uid="uid://vehhm5wx58af" path="res://resources/questions/vanaf_welk_jaar_proj.tres" id="20_i3l22"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ssgoc"]
 font = ExtResource("7_u6w8h")
@@ -246,7 +249,7 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="QuestionDisplay" parent="." unique_id=2084494044 instance=ExtResource("2_t5wam")]
-questions = Array[ExtResource("9_vfmmh")]([ExtResource("10_vom40"), ExtResource("11_ultrl"), ExtResource("12_80bkf"), ExtResource("13_i3l22"), ExtResource("14_my6rh"), ExtResource("15_dadte"), ExtResource("16_h33em"), ExtResource("17_465xe")])
+questions = Array[ExtResource("9_vfmmh")]([ExtResource("10_vom40"), ExtResource("11_ultrl"), ExtResource("12_80bkf"), ExtResource("13_i3l22"), ExtResource("14_my6rh"), ExtResource("15_dadte"), ExtResource("16_h33em"), ExtResource("17_465xe"), ExtResource("18_vom40"), ExtResource("19_80bkf"), ExtResource("20_i3l22")])
 
 [node name="Form" type="Node2D" parent="." unique_id=625509564]
 

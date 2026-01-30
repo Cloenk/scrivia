@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Question" format=3 uid="uid://cwwrsbiu1fxtp"]
+
+[ext_resource type="Script" uid="uid://c7i52175ijmhh" path="res://scripts/questions/general_question.gd" id="1_qlyca"]
+
+[resource]
+script = ExtResource("1_qlyca")
+question = "Wat doet een software developer?"
+isFourAnswers = true
+pointsWorth = 5.0
+firstAnswer = "Gamen"
+secondAnswer = "Problemen oplossen met code"
+thirdAnswer = "Servers aanmaken"
+fourthAnswer = "Printers installeren"
+correctAnswer = 2
+metadata/_custom_type_script = "uid://c7i52175ijmhh"

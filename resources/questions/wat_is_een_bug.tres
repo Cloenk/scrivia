@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Question" format=3 uid="uid://cao2kffuclga0"]
+
+[ext_resource type="Script" uid="uid://c7i52175ijmhh" path="res://scripts/questions/general_question.gd" id="1_3djkc"]
+
+[resource]
+script = ExtResource("1_3djkc")
+question = "Een bug in programmeren is een oplossing bedenken"
+isTrueOrFalse = true
+correctTOFAnswer = 1
+metadata/_custom_type_script = "uid://c7i52175ijmhh"

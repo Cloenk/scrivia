@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" format=3 uid="uid://vehhm5wx58af"]
+
+[ext_resource type="Script" uid="uid://c7i52175ijmhh" path="res://scripts/questions/general_question.gd" id="1_re4eh"]
+
+[resource]
+script = ExtResource("1_re4eh")
+question = "Vanaf welk jaar begin je in grote proecten te werken?"
+isFourAnswers = true
+firstAnswer = "1"
+secondAnswer = "2"
+thirdAnswer = "3"
+fourthAnswer = "4"
+correctAnswer = 2
+metadata/_custom_type_script = "uid://c7i52175ijmhh"

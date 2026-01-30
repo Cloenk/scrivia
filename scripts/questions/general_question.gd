@@ -16,7 +16,7 @@ class_name Question
 @export var correctAnswer: int
 
 @export_category("openQuestionSettings")
-@export var correctOpenAnswer: String
+@export var correctOpenAnswer: String = "0"
 
 @export_category("trueOrFalseSettings")
 @export var correctTOFAnswer: int
